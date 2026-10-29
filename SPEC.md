@@ -356,3 +356,15 @@ Accessibility pass, performance profiling, responsive panel behavior, onboarding
 - Preset browser and user-created kits.
 - Touch gestures and installable PWA behavior.
 - Offline-first asset caching and background rendering.
+
+## 19. Implementation Status / Resume Notes
+
+The current prototype implements the browser DAW shell through the first MVP hardening pass:
+
+- Vite + TypeScript project scaffold with Channel Rack, Piano Roll, Playlist, Browser, Inspector, and Mixer views.
+- Web Audio transport with synthesized drums, bass, MIDI note playback, swing, arrangement playback, loop, and metronome.
+- Editable steps, MIDI notes, playlist clips, clip dragging, clip duplication/deletion, channel creation/removal, mute/solo, volume, and pan.
+- IndexedDB autosave, local project recovery, `.trakk.json` import/export, imported audio persistence, and WAV arrangement export.
+- UI audit completed for navigation, popovers, browser search, panel collapse, shortcuts, undo/redo, and control feedback.
+
+To resume development, run `npm run dev` from the project root and open the local Vite URL. The next recommended work is to replace the remaining placeholders with real audio recording, a true multi-pattern bank, and non-4/4 timing support, followed by accessibility and performance testing. Downloaded `.trakk.json` files currently preserve project metadata; imported audio data remains stored in the local browser workspace.
